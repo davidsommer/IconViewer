@@ -1,0 +1,28 @@
+<idea-plugin>
+  <id>ch.dasoft.iconviewer</id>
+  <name>IconViewer</name>
+  <version>1.0</version>
+  <vendor email="david.sommer@dasoft.ch" url="https://www.dasoft.ch">dasoft.ch</vendor>
+
+  <description><![CDATA[
+Preview project images as an icon in your project explorer.
+Helpful if you have a lot of icons in your project, IconViewer gives you a nice preview icon.
+
+Bigger images are scaled to 16x16
+Supported are *.gif, *.png, *.bmp, *.jpg and *.tif images
+    ]]></description>
+
+  <change-notes><![CDATA[
+      19.05.2017 Version 1.0<br>
+    ]]>
+  </change-notes>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="145.0"/>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+    <iconProvider implementation="ch.dasoft.iconviewer.ImageIconProvider"/>
+  </extensions>
+
+</idea-plugin>
