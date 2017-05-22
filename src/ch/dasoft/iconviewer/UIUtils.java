@@ -6,7 +6,7 @@ package ch.dasoft.iconviewer;
  */
 class UIUtils {
 
-    private static final String[] IMAGE_EXTENSIONS  = {"*.gif", "*.png", "*.bmp", "*.jpg", "*.tif"};
+    private static final String[] IMAGE_EXTENSIONS  = {"*.jpeg", "*.jpg", "*.png", "*.wbmp", "*.gif", "*.bmp"};
 
     static boolean isImageFile(String fileName) {
         int dot = fileName.lastIndexOf(".");
