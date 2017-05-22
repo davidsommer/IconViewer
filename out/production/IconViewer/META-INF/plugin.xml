@@ -1,19 +1,27 @@
 <idea-plugin>
   <id>ch.dasoft.iconviewer</id>
   <name>IconViewer</name>
-  <version>1.0</version>
+  <version>1.1</version>
   <vendor email="david.sommer@dasoft.ch" url="https://www.dasoft.ch">dasoft.ch</vendor>
 
   <description><![CDATA[
 Preview project images as an icon in your project explorer.
 Helpful if you have a lot of icons in your project, IconViewer gives you a nice preview icon.
 
-Bigger images are scaled to 16x16
-Supported are *.gif, *.png, *.bmp, *.jpg and *.tif images
+Bigger images are scaled to 16x16, supported are:
+
+ - *.gif
+ - *.png
+ - *.bmp
+ - *.jpg
+ - *.jpeg
+ - *.wbmp
+ - *.bmp
     ]]></description>
 
   <change-notes><![CDATA[
-      19.05.2017 Version 1.0<br>
+      22.05.2017 Version 1.1 - bugfixes<br>
+      19.05.2017 Version 1.0 - init<br>
     ]]>
   </change-notes>
 
