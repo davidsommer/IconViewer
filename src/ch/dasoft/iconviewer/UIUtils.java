@@ -1,15 +1,14 @@
 package ch.dasoft.iconviewer;
 
 /**
- * Created by davidsommer on 19.05.17.
+ * Created by David Sommer on 19.05.17.
+ * @author davidsommer
  */
-public class UIUtils {
+class UIUtils {
 
-    public static final String[] IMAGE_EXTENSIONS  = {"*.gif", "*.png", "*.bmp", "*.jpg", "*.tif"};
-    public static final int      IMG_WIDTH         = 16;
-    public static final int      IMG_HEIGHT        = 16;
+    private static final String[] IMAGE_EXTENSIONS  = {"*.gif", "*.png", "*.bmp", "*.jpg", "*.tif"};
 
-    public static boolean isImageFile(String fileName) {
+    static boolean isImageFile(String fileName) {
         int dot = fileName.lastIndexOf(".");
         if (dot==-1) {
             return false;

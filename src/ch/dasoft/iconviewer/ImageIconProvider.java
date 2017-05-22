@@ -14,16 +14,18 @@ import java.io.FileNotFoundException;
 
 
 /**
- * Created by davidsommer on 19.05.17.
+ * Created by David Sommer on 19.05.17.
  * @author davidsommer
  */
 public class ImageIconProvider  extends IconProvider {
 
+    private static final int IMG_WIDTH  = 16;
+    private static final int IMG_HEIGHT = 16;
+
     public Icon getIcon(@NotNull PsiElement psiElement, int flags) {
         PsiFile containingFile = psiElement.getContainingFile();
-        if (containingFile != null && UIUtils.isImageFile(containingFile.getName())) {
-            ImageIcon imageIcon = new ImageIcon(containingFile.getVirtualFile().getCanonicalFile().getCanonicalPath());
-            Image image = null;
+        if (containingFile != null && containingFile.getVirtualFile().getCanonicalFile() != null && containingFile.getVirtualFile().getCanonicalFile().getCanonicalPath() != null && UIUtils.isImageFile(containingFile.getName())) {
+            Image image;
             try {
                 image = ImageLoader.loadFromStream(new BufferedInputStream(new FileInputStream(containingFile.getVirtualFile().getCanonicalFile().getCanonicalPath())));
             } catch (FileNotFoundException e) {
@@ -32,7 +34,7 @@ public class ImageIconProvider  extends IconProvider {
             }
 
             if (image != null) {
-                return new ImageIcon(image.getScaledInstance(16, 16, Image.SCALE_SMOOTH));
+                return new ImageIcon(image.getScaledInstance(IMG_WIDTH, IMG_HEIGHT, Image.SCALE_SMOOTH));
             }
         }
         return null;
