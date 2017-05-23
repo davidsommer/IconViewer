@@ -28,6 +28,10 @@ Bigger images are scaled to 16x16, supported are:
   <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
   <idea-version since-build="145.0"/>
 
+  <!-- Make plugin available to all IntelliJ IDEs
+     http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html -->
+  <depends>com.intellij.modules.platform</depends>
+
   <extensions defaultExtensionNs="com.intellij">
     <!-- Add your extensions here -->
     <iconProvider implementation="ch.dasoft.iconviewer.ImageIconProvider"/>
