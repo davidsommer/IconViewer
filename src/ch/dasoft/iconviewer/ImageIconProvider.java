@@ -24,7 +24,7 @@ public class ImageIconProvider  extends IconProvider {
 
     public Icon getIcon(@NotNull PsiElement psiElement, int flags) {
         PsiFile containingFile = psiElement.getContainingFile();
-        if (containingFile != null && containingFile.getVirtualFile().getCanonicalFile() != null && containingFile.getVirtualFile().getCanonicalFile().getCanonicalPath() != null && UIUtils.isImageFile(containingFile.getName())) {
+        if (containingFile != null && containingFile.getVirtualFile() != null && containingFile.getVirtualFile().getCanonicalFile() != null && containingFile.getVirtualFile().getCanonicalFile().getCanonicalPath() != null && UIUtils.isImageFile(containingFile.getName())) {
             Image image;
             try {
                 image = ImageLoader.loadFromStream(new BufferedInputStream(new FileInputStream(containingFile.getVirtualFile().getCanonicalFile().getCanonicalPath())));
