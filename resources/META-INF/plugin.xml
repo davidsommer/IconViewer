@@ -1,28 +1,37 @@
 <idea-plugin>
   <id>ch.dasoft.iconviewer</id>
   <name>IconViewer</name>
-  <version>1.11</version>
+  <version>1.12</version>
   <vendor email="david.sommer@dasoft.ch" url="https://www.dasoft.ch">dasoft.ch</vendor>
 
   <description><![CDATA[
-Preview project images as an icon in your project explorer.
-Helpful if you have a lot of icons in your project, IconViewer gives you a nice preview icon.
 
-Bigger images are scaled to 16x16, supported are:
-
- - *.gif
- - *.png
- - *.bmp
- - *.jpg
- - *.jpeg
- - *.wbmp
- - *.bmp
+  <h1>IconViewer</h1>
+  <br/>
+  <a href="https://github.com/davidsommer/IconViewer">GitHub</a>
+  <br/>
+  Preview project images as an icon in your project explorer.
+  Helpful if you have a lot of icons in your project, <b>IconViewer</b> gives you a nice preview icon.
+  <br/>
+  Bigger images are scaled to 16x16, supported are:
+  <br/>
+  <ul>
+  <li>*.gif</li>
+  <li>*.png</li>
+  <li>*.bmp</li>
+  <li>*.jpg</li>
+  <li>*.jpeg</li>
+  <li>*.wbmp</li>
+  </ul>
     ]]></description>
 
   <change-notes><![CDATA[
-      23.05.2017 Version 1.11 - bugfix, platform support<br>
-      22.05.2017 Version 1.1  - bugfixes<br>
-      19.05.2017 Version 1.0  - init<br>
+   <ul>
+   <li>06.07.2017 Version 1.12 - bugfix ignore images from external jars</li>
+   <li>23.05.2017 Version 1.11 - bugfix, platform support</li>
+   <li>22.05.2017 Version 1.1  - bugfixes</li>
+   <li>19.05.2017 Version 1.0  - init</li>
+   </ul>
     ]]>
   </change-notes>
 

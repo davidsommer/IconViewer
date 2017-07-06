@@ -1,5 +1,5 @@
 # out Folder for Plugin
-/out/
+/out/*
 
 # Compiled class file
 *.class
