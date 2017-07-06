@@ -24,7 +24,7 @@ public class ImageIconProvider  extends IconProvider {
 
     public Icon getIcon(@NotNull PsiElement psiElement, int flags) {
         PsiFile containingFile = psiElement.getContainingFile();
-        if (containingFile != null && containingFile.getVirtualFile() != null && containingFile.getVirtualFile().getCanonicalFile() != null && containingFile.getVirtualFile().getCanonicalFile().getCanonicalPath() != null && UIUtils.isImageFile(containingFile.getName())) {
+        if (checkImagePath(containingFile)) {
             Image image;
             try {
                 image = ImageLoader.loadFromStream(new BufferedInputStream(new FileInputStream(containingFile.getVirtualFile().getCanonicalFile().getCanonicalPath())));
@@ -38,5 +38,12 @@ public class ImageIconProvider  extends IconProvider {
             }
         }
         return null;
+    }
+
+    private boolean checkImagePath(PsiFile containingFile) {
+        if (containingFile == null || containingFile.getVirtualFile() == null || containingFile.getVirtualFile().getCanonicalFile().getCanonicalPath() == null) {
+            return false;
+        }
+        return UIUtils.isImageFile(containingFile.getName()) && ! containingFile.getVirtualFile().getCanonicalFile().getCanonicalPath().contains(".jar");
     }
 }
