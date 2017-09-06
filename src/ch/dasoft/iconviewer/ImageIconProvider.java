@@ -41,9 +41,6 @@ public class ImageIconProvider  extends IconProvider {
     }
 
     private boolean checkImagePath(PsiFile containingFile) {
-        if (containingFile == null || containingFile.getVirtualFile() == null || containingFile.getVirtualFile().getCanonicalFile() == null || containingFile.getVirtualFile().getCanonicalFile().getCanonicalPath() == null) {
-            return false;
-        }
-        return UIUtils.isImageFile(containingFile.getName()) && ! containingFile.getVirtualFile().getCanonicalFile().getCanonicalPath().contains(".jar");
+        return containingFile != null && containingFile.getVirtualFile() != null && containingFile.getVirtualFile().getCanonicalFile() != null && containingFile.getVirtualFile().getCanonicalFile().getCanonicalPath() != null && UIUtils.isImageFile(containingFile.getName()) && ! containingFile.getVirtualFile().getCanonicalFile().getCanonicalPath().contains(".jar");
     }
 }
