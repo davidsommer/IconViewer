@@ -8,3 +8,6 @@
 # Package Files #
 *.jar
 *.zip
+
+# IntelliJ
+.idea/**/workspace.xml
