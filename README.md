@@ -12,3 +12,4 @@ Bigger images are scaled to 16x16, supported are:
  - *.jpeg
  - *.wbmp
  - *.bmp
+ - *.svg

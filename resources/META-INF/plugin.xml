@@ -1,7 +1,7 @@
 <idea-plugin>
   <id>ch.dasoft.iconviewer</id>
   <name>IconViewer</name>
-  <version>1.12</version>
+  <version>1.13</version>
   <vendor email="david.sommer@dasoft.ch" url="https://www.dasoft.ch">dasoft.ch</vendor>
 
   <description><![CDATA[
@@ -22,11 +22,13 @@
   <li>*.jpg</li>
   <li>*.jpeg</li>
   <li>*.wbmp</li>
+  <li>*.svg</li>
   </ul>
     ]]></description>
 
   <change-notes><![CDATA[
    <ul>
+   <li>06.09.2017 Version 1.13 - clean up an added svg support</li>
    <li>06.07.2017 Version 1.12 - bugfix ignore images from external jars</li>
    <li>23.05.2017 Version 1.11 - bugfix, platform support</li>
    <li>22.05.2017 Version 1.1  - bugfixes</li>
