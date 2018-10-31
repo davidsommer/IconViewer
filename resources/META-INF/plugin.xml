@@ -23,7 +23,7 @@
   <li>*.jpeg</li>
   <li>*.wbmp</li>
   <li>*.svg</li>
-  <li>*.webp</li>
+  <li>*.webp (Android Studio only)</li>
   </ul>
     ]]></description>
 

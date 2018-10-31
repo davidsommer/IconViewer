@@ -13,3 +13,4 @@ Bigger images are scaled to 16x16, supported are:
  - *.wbmp
  - *.bmp
  - *.svg
+ - *.webp (Android Studio only)
