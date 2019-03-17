@@ -12,6 +12,7 @@ import java.io.FileInputStream;
 import javax.imageio.ImageIO;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
+import org.jdesktop.swingx.util.OS;
 import org.jetbrains.annotations.NotNull;
 
 /**
@@ -33,7 +34,7 @@ public class ImageIconProvider extends IconProvider {
             if (!StringUtil.isEmpty(canonicalPath)) {
                 try {
                     BufferedInputStream inputStream = new BufferedInputStream(new FileInputStream(canonicalPath));
-                    if (canonicalPath.endsWith(".webp")) {
+                    if (canonicalPath.endsWith(".webp")|| OS.isMacOSX()) {
                         //// Obtain a WebP ImageReader instance
                         //ImageReader reader = ImageIO.getImageReadersByMIMEType("image/webp").next();
                         //// Configure decoding parameters
